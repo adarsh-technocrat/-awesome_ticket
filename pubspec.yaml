@@ -1,7 +1,8 @@
 name: awesome_ticket
 description: A new Flutter plugin project.
 version: 0.0.1
-homepage:
+homepage: adarshkumarsingh.io
+repository: https://github.com/adarsh-technocrat/awesome_ticket
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
