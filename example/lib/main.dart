@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:awesome_ticket/awesome_ticket.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +13,27 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  late FlightCardData flightData;
+
+  @override
+  void initState() {
+    flightData = FlightCardData(
+      airlineName: "Indigo",
+      flightLocationInfo: FlightLocationInfo(
+          departureCode: "ods",
+          departureName: "Odessa",
+          destinationCode: "msq",
+          destinationName: "Minsk"),
+      arrivalDateTime: DateTime.now(),
+      departureDateTime: DateTime.now().add(const Duration(hours: 2)),
+      flightNumber: "B2834",
+      icon: const Icon(Icons.flight),
+      pnrNumber: "123456",
+    );
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +42,9 @@ class _MyAppState extends State<MyApp> {
             title: const Text('Awesome Ticket'),
           ),
           body: Column(
-            children: const [AwesomeTicketCard(), CustomAwesomeTicketCard()],
+            children: [
+              AwesomeFlightTicketCard(flightCardData: flightData, onTap: () {}),
+            ],
           )),
     );
   }

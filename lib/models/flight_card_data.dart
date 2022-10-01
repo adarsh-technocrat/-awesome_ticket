@@ -1,24 +1,33 @@
 import 'package:flutter/cupertino.dart';
 
 class FlightCardData {
-  final Function()? onTap;
   final DateTime departureDateTime;
   final DateTime arrivalDateTime;
-  final Map<String, String> boardingLocationInfo;
-  final Map<String, String> destinationLocationInfo;
+  final FlightLocationInfo flightLocationInfo;
   final String flightNumber;
   final String airlineName;
   final String? pnrNumber;
   final Widget? icon;
 
   FlightCardData(
-      {this.onTap,
-      required this.departureDateTime,
+      {required this.departureDateTime,
       required this.arrivalDateTime,
-      required this.boardingLocationInfo,
-      required this.destinationLocationInfo,
+      required this.flightLocationInfo,
       required this.flightNumber,
       required this.airlineName,
       this.pnrNumber,
       this.icon});
+}
+
+class FlightLocationInfo {
+  final String departureName;
+  final String departureCode;
+  final String destinationName;
+  final String destinationCode;
+
+  FlightLocationInfo(
+      {required this.departureName,
+      required this.departureCode,
+      required this.destinationName,
+      required this.destinationCode});
 }
