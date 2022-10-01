@@ -1,15 +1,14 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class CustomAwesomeTicket extends StatefulWidget {
-  const CustomAwesomeTicket({Key? key}) : super(key: key);
+class CustomAwesomeTicketCard extends StatefulWidget {
+  const CustomAwesomeTicketCard({Key? key}) : super(key: key);
 
   @override
-  State<CustomAwesomeTicket> createState() => _CustomAwesomeTicketState();
+  State<CustomAwesomeTicketCard> createState() =>
+      _CustomAwesomeTicketCardState();
 }
 
-class _CustomAwesomeTicketState extends State<CustomAwesomeTicket> {
+class _CustomAwesomeTicketCardState extends State<CustomAwesomeTicketCard> {
   @override
   Widget build(BuildContext context) {
     return Container();
