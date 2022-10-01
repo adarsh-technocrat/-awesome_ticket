@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
       arrivalDateTime: DateTime.now(),
       departureDateTime: DateTime.now().add(const Duration(hours: 2)),
       flightNumber: "B2834",
-      icon: const Icon(Icons.flight),
+      icon: const Icon(Icons.flight_takeoff_rounded),
       pnrNumber: "123456",
     );
 
@@ -37,8 +37,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.black,
             title: const Text('Awesome Ticket'),
           ),
           body: Column(

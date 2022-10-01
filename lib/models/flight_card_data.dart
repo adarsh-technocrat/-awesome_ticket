@@ -17,6 +17,11 @@ class FlightCardData {
       required this.airlineName,
       this.pnrNumber,
       this.icon});
+
+  @override
+  String toString() {
+    return 'FlightCardData(departureDateTime: $departureDateTime, arrivalDateTime: $arrivalDateTime, flightLocationInfo: $flightLocationInfo, flightNumber: $flightNumber, airlineName: $airlineName, pnrNumber: $pnrNumber, icon: $icon)';
+  }
 }
 
 class FlightLocationInfo {
@@ -30,4 +35,9 @@ class FlightLocationInfo {
       required this.departureCode,
       required this.destinationName,
       required this.destinationCode});
+
+  @override
+  String toString() {
+    return 'FlightLocationInfo(departureName: $departureName, departureCode: $departureCode, destinationName: $destinationName, destinationCode: $destinationCode)';
+  }
 }
