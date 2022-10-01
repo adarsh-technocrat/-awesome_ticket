@@ -1,8 +1,4 @@
+library awesome_ticket;
 
-import 'awesome_ticket_platform_interface.dart';
-
-class AwesomeTicket {
-  Future<String?> getPlatformVersion() {
-    return AwesomeTicketPlatform.instance.getPlatformVersion();
-  }
-}
+export 'awesome_ticket_card.dart';
+export './enums/awesome_ticket_card_enum.dart';
